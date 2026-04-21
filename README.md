@@ -1,58 +1,226 @@
-# AI Data Analyst Agent
+# 🚀 AI Data Analyst Agent
 
-An AI-powered data analyst application that allows users to upload CSV files, ask questions in natural language, and generate insights with charts and tables.
+An intelligent, full-stack AI application that allows users to upload CSV datasets, ask questions in natural language, and receive **insightful analysis with visual charts and tables** — just like a real data analyst.
 
-## Features
-- CSV upload and dataset inspection
-- Natural language Q&A
-- AI-generated analytical insights
-- Automatic chart generation
-- Summary tables for visual analysis
+---
 
-## Tech Stack
-- Frontend: Next.js, Tailwind CSS, Chart.js
-- Backend: FastAPI, Pandas
-- AI Model: Gemini
+## 🧠 Overview
 
-## Project Structure
+The **AI Data Analyst Agent** transforms raw data into meaningful insights using a combination of:
+
+* Data processing (Pandas)
+* Backend APIs (FastAPI)
+* AI-generated explanations (LLM)
+* Interactive frontend (Next.js + Chart.js)
+
+It enables **non-technical users** to explore data without writing code.
+
+---
+
+## ✨ Key Features
+
+* 📂 **CSV Upload & Parsing**
+
+  * Upload structured datasets instantly
+  * Automatic schema detection (columns, types, nulls)
+
+* 💬 **Natural Language Querying**
+
+  * Ask questions like:
+
+    * *“Top 5 products by revenue”*
+    * *“Show monthly trend”*
+
+* 📊 **Automatic Data Visualization**
+
+  * Bar charts for comparisons
+  * Line charts for trends
+  * Auto-generated based on query intent
+
+* 🧾 **Insight Generation**
+
+  * AI explains results in simple language
+  * Includes insights and recommendations
+
+* 📋 **Tabular Data Output**
+
+  * Structured tables for deeper inspection
+
+---
+
+## 🏗️ Tech Stack
+
+### 🔹 Frontend
+
+* Next.js (React Framework)
+* Tailwind CSS
+* Chart.js (Data Visualization)
+
+### 🔹 Backend
+
+* FastAPI
+* Pandas
+
+### 🔹 AI Layer
+
+* Gemini API (LLM for explanation)
+
+---
+
+## 📁 Project Structure
+
 ```bash
-backend/
-frontend/
-
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+AI-Data-Analyst/
+│
+├── backend/
+│   ├── main.py          # FastAPI server
+│   ├── analyst.py       # Data analysis logic
+│   ├── utils.py         # AI explanation layer
+│
+├── frontend/
+│   ├── src/app/page.tsx
+│   ├── src/components/ChartView.tsx
+│
+├── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. User uploads a CSV file
+2. Backend processes dataset using Pandas
+3. User asks a question
+4. Backend:
 
-## Learn More
+   * Analyzes data (`analyst.py`)
+   * Generates explanation (`utils.py`)
+5. Frontend displays:
 
-To learn more about Next.js, take a look at the following resources:
+   * Answer
+   * Chart (if applicable)
+   * Table data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+### 1️⃣ Clone Repository
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git clone https://github.com/YOUR_USERNAME/ai-data-analyst-agent.git
+cd ai-data-analyst-agent
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 2️⃣ Setup Backend
+
+```bash
+cd backend
+
+# Create virtual environment
+python -m venv venv
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run server
+python -m uvicorn main:app --reload
+```
+
+---
+
+### 3️⃣ Setup Frontend
+
+```bash
+cd frontend
+
+npm install
+npm run dev
+```
+
+---
+
+### 4️⃣ Open in Browser
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 🧪 Example Queries
+
+* Top 5 products by revenue
+* Compare revenue by category
+* Show monthly revenue trend
+* Total revenue
+* Average price
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots here after deployment
+> Example:
+
+* Upload UI
+* Chart output
+* AI insights
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside `backend/`:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+⚠️ Never upload `.env` to GitHub.
+
+---
+
+## 📈 Future Improvements
+
+* Support large datasets (50k+ rows with chunking)
+* Smart chart selection using AI
+* Export insights as PDF/Excel
+* Multi-file analysis
+* Dashboard mode (multiple charts)
+
+---
+
+## 💡 Use Cases
+
+* Business analytics
+* Sales insights
+* Student projects
+* Data exploration tools
+* AI-powered BI assistant
+
+---
+
+## 👨‍💻 Author
+
+**Nitin Rawat**
+Aspiring AI Engineer | Gen AI Developer
+
+---
+
+## ⭐ Contribute
+
+If you like this project:
+
+* Star ⭐ the repo
+* Fork 🍴 and improve
+* Open PRs 🚀
+
+---
+
+## 📜 License
+
+This project is open-source and available under the MIT License.
